@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Example</title>
+    <!-- include local javascript here --> 
+    <script type="text/javascript" src="webpage_stuff/js/examples.js"> </script>
+
+    <!--jQuery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  </head>
+
+  <body id="page-top">
+
+    <div id="button_div"> </div>
+    <div id="clear_page_div"></div>
+    <div id="hide_page_div"></div>
+    <div id="show_page_div"></div>
+
+    <div class="flask_info" id="div1"></div>
+    <div class="flask_info" id="div2"></div>
+    <div class="flask_info" id="div3"></div>
+    <div class="flask_info" id="div4"></div>
+    
+    <!-- Javascript which requires flask templating here - Define the script root --> 
+    <script type=text/javascript>
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <!-- Javascript Initialization Here --> 
+    <script>
+      initializeUI();
+    </script>
+
+  </body>
+
+</html>
